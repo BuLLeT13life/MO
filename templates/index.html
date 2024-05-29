@@ -1,0 +1,90 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Document</title>
+
+	<script src="/static/libs/gsap/gsap.min.js" defer></script>
+	<script src="/static/libs/gsap/ScrollTrigger.min.js" defer></script>
+	<script src="/static/libs/gsap/ScrollSmoother.min.js" defer></script>
+
+	<link rel="stylesheet" href="/static/css/main.css">
+	<script src="/static/js/app.js" defer></script>
+	<script type="text/javascript" src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+</head>
+<body>
+
+	<div class="wrapper">
+		<div class="content">
+
+			<header class="hero-section">
+				<img data-speed=".6" class="hero" src="/static/img/Model.fit.png" alt="Alt" >
+				<div class="container">
+					<div data-speed=".75" class="main-header">
+						<h1 class="main-title">Оценка психоэмоционального и мотивационного окраса текста  </h1>
+					</div>
+				</div>
+			</header>
+
+			<div class="portfolio">
+				<div class="container">
+					<main class="gallery">
+
+						<div data-speed=".9" class="gallery__left">
+							<div class="text-block gallery__item">
+								<h2 class="text-block__h">Мы молодая команда из Санкт-Петербурга</h2>
+								<p class="text-block__p"> В нашей мини-фотогалереи Вы видите , то что мы использовали в нашем проекте</p>
+							</div>
+
+							<img class="gallery__item" src="/static/img/work/js.png" alt="Alt">
+
+							<div class="text-block gallery__item">
+								<h2 class="text-block__h">Введите текст в поле ниже и вы увидите , как мы оцениваем окрас текста </h2>
+								<p class="text-block__p">Из-за больших моделей надо подождать пару секунд.</p>
+							</div>
+
+							<div class="text_are gallery__item" id="swap">
+								<form action="/process_text" method="POST" enctype="multipart/form-data" >
+							<textarea  id="story" name="text" placeholder="Введите текст" ></textarea>
+
+									<div class="file-upload">
+									  <div class="file-select">
+										<div class="file-select-button" id="fileName">Выберите файл</div>
+										<div class="file-select-name" id="noFile">Фаил не выбран...</div>
+										<input type="file" name="file" id="chooseFile">
+									  </div>
+									</div>
+
+									<button  id="qqq" > <p>Отправить</p></button>
+								</form>
+							</div>
+
+						</div>
+
+						<div data-speed="1.1" class="gallery__right">
+
+							<img class="gallery__item"  src="/static/img/work/python (1).jpg" alt="Alt">
+
+							<img class="gallery__item" src="/static/img/work/ML (1).jpg" alt="Alt">
+							<img class="gallery__item" id="foto" src="/static/img/work/5.jpg" alt="Alt">
+
+
+
+
+						</div>
+
+					</main>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+</body>
+</html>
